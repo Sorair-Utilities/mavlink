@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <mavlink>
 
+  <version>2.0</version>
+
   <include>uAvionix.xml</include>
 
   <!-- Enums -->
