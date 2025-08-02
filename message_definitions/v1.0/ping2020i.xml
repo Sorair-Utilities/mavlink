@@ -98,7 +98,7 @@
       <field type="uint8_t" name="rf_select">RF control flags</field>
     </message>
 
-    <message id="203" name="PING2020I_STATUS"  crc_extra="85">
+    <message id="203" name="PING2020I_STATUS">
       <description>Self-test status message</description>
       <field type="uint8_t" name="status" enum="PING2020I_STATUS_FLAGS">Self test status</field>
     </message>
