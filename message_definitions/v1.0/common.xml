@@ -8182,15 +8182,17 @@
 
     <message id="201" name="UAVIONIX_ADSB_OUT_STATIC">
       <description>Static configuration message for UAVIONIX ADS-B Out transceiver</description>
-      <field type="uint32_t" name="icao_address">ICAO Address</field>
-      <field type="char[8]" name="callsign">Aircraft callsign (null-terminated)</field>
-      <field type="uint8_t" name="emitter_type">Emitter type</field>
-      <field type="uint8_t" name="aircraft_size">Aircraft size</field>
-      <field type="uint8_t" name="gps_offset_lat">GPS lateral offset</field>
-      <field type="uint8_t" name="gps_offset_lon">GPS longitudinal offset</field>
-      <field type="uint16_t" name="stall_speed" units="cm/s">Stall speed</field>
-      <field type="uint8_t" name="rf_select">RF control flags</field>
+      <field type="uint8_t[3]" name="icao_address">Vehicle address (24 bits). Byte[2] = msByte</field>
+      <field type="uint8_t" name="integrity">System Integrity and Design Assurance</field>
+      <field type="uint16_t" name="stall_speed" units="cm/s">Aircraft stall speed in cm/s</field>
+      <field type="char[8]" name="callsign">Vehicle identifier (8 characters, valid characters are A-Z, 0-9, " " only)</field>
+      <field type="uint8_t" name="capability">Max Aircraft Speed and ADS-B in capability</field>
+      <field type="uint8_t" name="emitter_type">Transmitting vehicle type</field>
+      <field type="uint8_t" name="aircraft_size">Aircraft length and width encoding (table 2-35 of DO-282B)</field>
+      <field type="uint8_t" name="gps_offset_lat">GPS antenna lateral offset (table 2-36 of DO-282B)</field>
+      <field type="uint8_t" name="gps_offset_lon">GPS antenna longitudinal offset from nose [if non-zero, take position (in meters) divide by 2 and add one with max 60m] (table 2-37 DO-282B)</field>
     </message>
+
 
     <message id="203" name="UAVIONIX_ADSB_OUT_STATUS">
       <description>Self test status.</description>
