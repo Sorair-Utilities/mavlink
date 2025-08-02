@@ -99,13 +99,6 @@
       <field type="uint8_t" name="status" enum="PING202I_STATUS_FLAGS">Self test status</field>
     </message>
 
-    <message id="29" name="PING202I_SCALED_PRESSURE">
-      <description>Scaled pressure and temperature sensor readings</description>
-      <field type="uint32_t" name="time_boot_ms">Timestamp (ms since boot)</field>
-      <field type="float" name="press_abs">Barometric pressure (mbar)</field>
-      <field type="float" name="press_diff">Differential pressure (mbar)</field>
-      <field type="int16_t" name="temperature">Temperature (0.01 °C)</field>
-    </message>
 
     <message id="248" name="PING202I_IDENTIFICATION">
       <description>Identification Message from Ping device</description>
