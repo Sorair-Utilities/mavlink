@@ -58,6 +58,8 @@
 
   </enums>
 
+  <messages>
+
   <!-- Messages -->
     <message id="202" name="PING202I_OWNERSHIP_REPORT">
       <description>Dynamic / Ownship message from Ping transceiver</description>
