@@ -74,12 +74,12 @@
       <field type="int16_t" name="velVert" units="m/s * 1E2">Vertical speed</field>
       <field type="int16_t" name="nsVog" units="m/s * 1E2">North-South velocity</field>
       <field type="int16_t" name="ewVog" units="m/s * 1E2">East-West velocity</field>
-      <field type="uint16_t" name="state" enum="UAVIONIX_ADSB_DYNAMIC_STATE">Dynamic state flags</field>
+      <field type="uint16_t" name="state" enum="PING202I_DYNAMIC_STATE">Dynamic state flags</field>
       <field type="uint16_t" name="squawk">Squawk code (Mode A)</field>
-      <field type="uint8_t" name="fixType" enum="UAVIONIX_ADSB_FIX_TYPE">GPS Fix Type</field>
+      <field type="uint8_t" name="fixType" enum="PING202I_FIX_TYPE">GPS Fix Type</field>
       <field type="uint8_t" name="numSats">Number of satellites</field>
-      <field type="uint8_t" name="emStatus">Emergency status</field>
-      <field type="uint8_t" name="control">ADS-B transponder dynamic input control flags</field>
+      <field type="uint8_t" name="emStatus" enum="PING202I_OWNERSHIP_EMERGENCY_STATUS">Emergency status</field>
+      <field type="uint8_t" name="control" enum="PING202I_OWNERSHIP_CONTROL">ADS-B transponder dynamic input control flags</field>
     </message>
 
     <message id="201" name="PING202I_STATIC">
