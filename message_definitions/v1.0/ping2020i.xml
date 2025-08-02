@@ -3,10 +3,6 @@
 
   <include>uAvionix.xml</include>
 
-  <dialect>ping2020i</dialect>
-
-
-
   <!-- Enums -->
   <enums>
 
