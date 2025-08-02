@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <mavlink>
 
-  <version>2.0</version>
+  <dialect>ping2020i</dialect>
+
+  <version>2</version>
 
   <include>uAvionix.xml</include>
 
