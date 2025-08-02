@@ -6,16 +6,16 @@
   <dialect>0</dialect>
   <enums>
 
-    <enum name="PING2020I_DYNAMIC_STATE" bitmask="true">
+    <enum name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE" bitmask="true">
         <description>ADS-B transponder dynamic state flags</description>
-        <entry value="0x01" name="PING2020I_ADSB_DYNAMIC_STATE_INTENT_CHANGE"/>
-        <entry value="0x02" name="PING2020I_ADSB_DYNAMIC_STATE_AUTOPILOT_ENABLED"/>
-        <entry value="0x04" name="PING2020I_ADSB_DYNAMIC_STATE_NICBARO_CROSSCHECKED"/>
-        <entry value="0x08" name="PING2020I_ADSB_DYNAMIC_STATE_ON_GROUND"/>
-        <entry value="0x10" name="PING2020I_ADSB_DYNAMIC_STATE_IDENT"/>
+        <entry value="0x01" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_INTENT_CHANGE"/>
+        <entry value="0x02" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_AUTOPILOT_ENABLED"/>
+        <entry value="0x04" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_NICBARO_CROSSCHECKED"/>
+        <entry value="0x08" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_ON_GROUND"/>
+        <entry value="0x10" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_IDENT"/>
       </enum>
 
-      <enum name="PING2020I_OWNERSHIP_CONTROL" bitmask="true">
+      <enum name="UAVIONIX_ADSB_OUT_OWNERSHIP_CONTROL" bitmask="true">
         <entry value="0" name="CONTROL_STANDBY"/>
         <entry value="1" name="CONTROL_RECEIVE_ONLY"/>
         <entry value="2" name="CONTROL_TX_ENABLE_1090"/>
@@ -25,25 +25,25 @@
         <entry value="32" name="CONTROL_MODE_S_ENABLED"/>
       </enum>
 
-      <enum name="PING2020I_FIX_TYPE">
+      <enum name="UAVIONIX_ADSB_OUT_FIX_TYPE">
         <description>GPS fix types for dynamic report</description>
-        <entry value="0x00" name="PING2020I_ADSB_GPS_NO_FIX_0"/>
-        <entry value="0x01" name="PING2020I_ADSB_GPS_NO_FIX_1"/>
-        <entry value="0x02" name="PING2020I_ADSB_GPS_2D_FIX"/>
-        <entry value="0x03" name="PING2020I_ADSB_GPS_3D_FIX"/>
-        <entry value="0x04" name="PING2020I_ADSB_GPS_DGPS"/>
-        <entry value="0x05" name="PING2020I_ADSB_GPS_RTK"/>
+        <entry value="0x00" name="UAVIONIX_ADSB_OUT_GPS_NO_FIX_0"/>
+        <entry value="0x01" name="UAVIONIX_ADSB_OUT_GPS_NO_FIX_1"/>
+        <entry value="0x02" name="UAVIONIX_ADSB_OUT_GPS_2D_FIX"/>
+        <entry value="0x03" name="UAVIONIX_ADSB_OUT_GPS_3D_FIX"/>
+        <entry value="0x04" name="UAVIONIX_ADSB_OUT_GPS_DGPS"/>
+        <entry value="0x05" name="UAVIONIX_ADSB_OUT_GPS_RTK"/>
       </enum>
 
-      <enum name="PING2020I_OWNERSHIP_EMERGENCY_STATUS">
-        <entry value="0" name="EMERGENCY_NONE"/>
-        <entry value="1" name="EMERGENCY_GENERAL"/>
-        <entry value="2" name="EMERGENCY_LIFEGUARD"/>
-        <entry value="3" name="EMERGENCY_MIN_FUEL"/>
-        <entry value="4" name="EMERGENCY_NO_COMM"/>
-        <entry value="5" name="EMERGENCY_UNLAWFUL_INTERFERENCE"/>
-        <entry value="6" name="EMERGENCY_DOWNED_AIRCRAFT"/>
-        <entry value="7" name="EMERGENCY_RESERVED"/>
+      <enum name="UAVIONIX_ADSB_OUT_OWNERSHIP_EMERGENCY_STATUS">
+        <entry value="0" name="UAVIONIX_ADSB_OUT_EMERGENCY_NONE"/>
+        <entry value="1" name="UAVIONIX_ADSB_OUT_EMERGENCY_GENERAL"/>
+        <entry value="2" name="UAVIONIX_ADSB_OUT_EMERGENCY_LIFEGUARD"/>
+        <entry value="3" name="UAVIONIX_ADSB_OUT_EMERGENCY_MIN_FUEL"/>
+        <entry value="4" name="UAVIONIX_ADSB_OUT_EMERGENCY_NO_COMM"/>
+        <entry value="5" name="UAVIONIX_ADSB_OUT_EMERGENCY_UNLAWFUL_INTERFERENCE"/>
+        <entry value="6" name="UAVIONIX_ADSB_OUT_EMERGENCY_DOWNED_AIRCRAFT"/>
+        <entry value="7" name="UAVIONIX_ADSB_OUT_EMERGENCY_RESERVED"/>
       </enum>
 
     <enum name="UAVIONIX_ADSB_OUT_STATUS" bitmask="true">
@@ -8157,8 +8157,10 @@
       <field type="uint16_t" name="humidity" units="c%">Humidity</field>
     </message>
 
-     <message id="202" name="PING2020I_OWNERSHIP_REPORT">
-      <description>Dynamic / Ownship message from Ping transceiver</description>
+     <!-- The message  are reserved for UAVIONIX PING2020I. -->
+
+     <message id="202" name="UAVIONIX_ADSB_OUT_OWNERSHIP_REPORT">
+      <description>Dynamic / Ownship message from UAVIONIX ADS-B Out transceiver</description>
       <field type="uint32_t" name="utcTime" units="s">UTC time in seconds since GPS epoch (Jan 6, 1980)</field>
       <field type="int32_t" name="latitude" units="degE7">Latitude WGS84</field>
       <field type="int32_t" name="longitude" units="degE7">Longitude WGS84</field>
@@ -8170,16 +8172,16 @@
       <field type="int16_t" name="velVert" units="m/s * 1E2">Vertical speed</field>
       <field type="int16_t" name="nsVog" units="m/s * 1E2">North-South velocity</field>
       <field type="int16_t" name="ewVog" units="m/s * 1E2">East-West velocity</field>
-      <field type="uint16_t" name="state" enum="PING2020I_DYNAMIC_STATE">Dynamic state flags</field>
+      <field type="uint16_t" name="state" enum="UAVIONIX_ADSB_OUT_DYNAMIC_STATE">Dynamic state flags</field>
       <field type="uint16_t" name="squawk">Squawk code (Mode A)</field>
-      <field type="uint8_t" name="fixType" enum="PING2020I_FIX_TYPE">GPS Fix Type</field>
+      <field type="uint8_t" name="fixType" enum="UAVIONIX_ADSB_OUT_FIX_TYPE">GPS Fix Type</field>
       <field type="uint8_t" name="numSats">Number of satellites</field>
-      <field type="uint8_t" name="emStatus" enum="PING2020I_OWNERSHIP_EMERGENCY_STATUS">Emergency status</field>
-      <field type="uint8_t" name="control" enum="PING2020I_OWNERSHIP_CONTROL">ADS-B transponder dynamic input control flags</field>
+      <field type="uint8_t" name="emStatus" enum="UAVIONIX_ADSB_OUT_OWNERSHIP_EMERGENCY_STATUS">Emergency status</field>
+      <field type="uint8_t" name="control" enum="UAVIONIX_ADSB_OUT_OWNERSHIP_CONTROL">ADS-B transponder dynamic input control flags</field>
     </message>
 
-    <message id="201" name="PING2020I_STATIC">
-      <description>Static configuration message for Ping transceiver</description>
+    <message id="201" name="UAVIONIX_ADSB_OUT_STATIC">
+      <description>Static configuration message for UAVIONIX ADS-B Out transceiver</description>
       <field type="uint32_t" name="icao_address">ICAO Address</field>
       <field type="char[8]" name="callsign">Aircraft callsign (null-terminated)</field>
       <field type="uint8_t" name="emitter_type">Emitter type</field>
@@ -8196,8 +8198,8 @@
     </message>
 
 
-    <message id="248" name="PING2020I_IDENTIFICATION">
-      <description>Identification Message from Ping device</description>
+    <message id="248" name="UAVIONIX_ADSB_OUT_IDENTIFICATION">
+      <description>Identification Message from UAVIONIX ADS-B Out device</description>
 
       <field type="uint16_t" name="message_type">Message Type</field>
       <field type="uint8_t" name="target_network">Network ID</field>
