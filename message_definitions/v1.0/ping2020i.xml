@@ -83,6 +83,7 @@
     </message>
 
     <message id="201" name="PING202I_STATIC">
+      <description>Static configuration message for Ping transceiver</description>
       <field type="uint32_t" name="icao_address">ICAO Address</field>
       <field type="char[8]" name="callsign">Aircraft callsign (null-terminated)</field>
       <field type="uint8_t" name="emitter_type">Emitter type</field>
