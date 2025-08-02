@@ -8222,9 +8222,5 @@
       <field type="uint32_t" name="secondaryCRC">Secondary CRC</field>
       <field type="uint8_t[15]" name="secondaryFwPartNumber">Secondary FW Part Number</field>
     </message>
-
-  </messages>
-
-
   </messages>
 </mavlink>
