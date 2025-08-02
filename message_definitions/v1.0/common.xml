@@ -46,14 +46,14 @@
         <entry value="7" name="EMERGENCY_RESERVED"/>
       </enum>
 
-    <enum name="PING2020I_STATUS_FLAGS" bitmask="true">
+    <enum name="UAVIONIX_ADSB_OUT_STATUS" bitmask="true">
       <description>Status flags indicating transceiver self-test results</description>
-      <entry value="0x00" name="PING2020I_STATUS_INITIALIZING" />
-      <entry value="0x01" name="PING2020I_STATUS_OK" />
-      <entry value="0x02" name="PING2020I_STATUS_TX_FAIL_1090ES" />
-      <entry value="0x04" name="PING2020I_STATUS_RX_FAIL_1090ES" />
-      <entry value="0x08" name="PING2020I_STATUS_TX_FAIL_UAT" />
-      <entry value="0x10" name="PING2020I_STATUS_RX_FAIL_UAT" />
+      <entry value="0x00" name="UAVIONIX_ADSB_OUT_STATUS_INITIALIZING" />
+      <entry value="0x01" name="UAVIONIX_ADSB_OUT_STATUS_OK" />
+      <entry value="0x02" name="UAVIONIX_ADSB_OUT_STATUS_TX_FAIL_1090ES" />
+      <entry value="0x04" name="UAVIONIX_ADSB_OUT_STATUS_RX_FAIL_1090ES" />
+      <entry value="0x08" name="UAVIONIX_ADSB_OUT_STATUS_TX_FAIL_UAT" />
+      <entry value="0x10" name="UAVIONIX_ADSB_OUT_STATUS_RX_FAIL_UAT" />
     </enum>
 
 
@@ -8190,9 +8190,9 @@
       <field type="uint8_t" name="rf_select">RF control flags</field>
     </message>
 
-    <message id="203" name="PING2020I_STATUS">
-      <description>Self-test status message</description>
-      <field type="uint8_t" name="status" enum="PING2020I_STATUS_FLAGS">Self test status</field>
+    <message id="203" name="UAVIONIX_ADSB_OUT_STATUS">
+      <description>Self test status.</description>
+      <field type="uint8_t" name="status" enum="UAVIONIX_ADSB_OUT_STATUS">Self test status</field>
     </message>
 
 
