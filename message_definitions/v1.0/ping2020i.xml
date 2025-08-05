@@ -6,63 +6,66 @@
   <!-- Enums -->
   <enums>
 
-    <enum name="PING2020I_DYNAMIC_STATE" bitmask="true">
-      <description>ADS-B transponder dynamic state flags</description>
-      <entry value="0x01" name="PING2020I_ADSB_DYNAMIC_STATE_INTENT_CHANGE"/>
-      <entry value="0x02" name="PING2020I_ADSB_DYNAMIC_STATE_AUTOPILOT_ENABLED"/>
-      <entry value="0x04" name="PING2020I_ADSB_DYNAMIC_STATE_NICBARO_CROSSCHECKED"/>
-      <entry value="0x08" name="PING2020I_ADSB_DYNAMIC_STATE_ON_GROUND"/>
-      <entry value="0x10" name="PING2020I_ADSB_DYNAMIC_STATE_IDENT"/>
-    </enum>
+   <enum name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE" bitmask="true">
+        <description>ADS-B transponder dynamic state flags</description>
+        <entry value="0x01" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_INTENT_CHANGE"/>
+        <entry value="0x02" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_AUTOPILOT_ENABLED"/>
+        <entry value="0x04" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_NICBARO_CROSSCHECKED"/>
+        <entry value="0x08" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_ON_GROUND"/>
+        <entry value="0x10" name="UAVIONIX_ADSB_OUT_DYNAMIC_STATE_IDENT"/>
+      </enum>
 
-    <enum name="PING2020I_OWNERSHIP_CONTROL" bitmask="true">
-      <entry value="0" name="CONTROL_STANDBY"/>
-      <entry value="1" name="CONTROL_RECEIVE_ONLY"/>
-      <entry value="2" name="CONTROL_TX_ENABLE_1090"/>
-      <entry value="4" name="CONTROL_TX_ENABLE_UAT"/>
-      <entry value="8" name="CONTROL_MODE_A_ENABLED"/>
-      <entry value="16" name="CONTROL_MODE_C_ENABLED"/>
-      <entry value="32" name="CONTROL_MODE_S_ENABLED"/>
-    </enum>
+      <enum name="UAVIONIX_ADSB_OUT_OWNERSHIP_CONTROL" bitmask="true">
+        <entry value="0" name="CONTROL_STANDBY"/>
+        <entry value="1" name="CONTROL_RECEIVE_ONLY"/>
+        <entry value="2" name="CONTROL_TX_ENABLE_1090"/>
+        <entry value="4" name="CONTROL_TX_ENABLE_UAT"/>
+        <entry value="8" name="CONTROL_MODE_A_ENABLED"/>
+        <entry value="16" name="CONTROL_MODE_C_ENABLED"/>
+        <entry value="32" name="CONTROL_MODE_S_ENABLED"/>
+      </enum>
 
-    <enum name="PING2020I_FIX_TYPE">
-      <description>GPS fix types for dynamic report</description>
-      <entry value="0x00" name="PING2020I_ADSB_GPS_NO_FIX_0"/>
-      <entry value="0x01" name="PING2020I_ADSB_GPS_NO_FIX_1"/>
-      <entry value="0x02" name="PING2020I_ADSB_GPS_2D_FIX"/>
-      <entry value="0x03" name="PING2020I_ADSB_GPS_3D_FIX"/>
-      <entry value="0x04" name="PING2020I_ADSB_GPS_DGPS"/>
-      <entry value="0x05" name="PING2020I_ADSB_GPS_RTK"/>
-    </enum>
+      <enum name="UAVIONIX_ADSB_OUT_FIX_TYPE">
+        <description>GPS fix types for dynamic report</description>
+        <entry value="0x00" name="UAVIONIX_ADSB_OUT_GPS_NO_FIX_0"/>
+        <entry value="0x01" name="UAVIONIX_ADSB_OUT_GPS_NO_FIX_1"/>
+        <entry value="0x02" name="UAVIONIX_ADSB_OUT_GPS_2D_FIX"/>
+        <entry value="0x03" name="UAVIONIX_ADSB_OUT_GPS_3D_FIX"/>
+        <entry value="0x04" name="UAVIONIX_ADSB_OUT_GPS_DGPS"/>
+        <entry value="0x05" name="UAVIONIX_ADSB_OUT_GPS_RTK"/>
+      </enum>
 
-    <enum name="PING2020I_OWNERSHIP_EMERGENCY_STATUS">
-      <entry value="0" name="EMERGENCY_NONE"/>
-      <entry value="1" name="EMERGENCY_GENERAL"/>
-      <entry value="2" name="EMERGENCY_LIFEGUARD"/>
-      <entry value="3" name="EMERGENCY_MIN_FUEL"/>
-      <entry value="4" name="EMERGENCY_NO_COMM"/>
-      <entry value="5" name="EMERGENCY_UNLAWFUL_INTERFERENCE"/>
-      <entry value="6" name="EMERGENCY_DOWNED_AIRCRAFT"/>
-      <entry value="7" name="EMERGENCY_RESERVED"/>
-    </enum>
+      <enum name="UAVIONIX_ADSB_OUT_OWNERSHIP_EMERGENCY_STATUS">
+        <entry value="0" name="UAVIONIX_ADSB_OUT_EMERGENCY_NONE"/>
+        <entry value="1" name="UAVIONIX_ADSB_OUT_EMERGENCY_GENERAL"/>
+        <entry value="2" name="UAVIONIX_ADSB_OUT_EMERGENCY_LIFEGUARD"/>
+        <entry value="3" name="UAVIONIX_ADSB_OUT_EMERGENCY_MIN_FUEL"/>
+        <entry value="4" name="UAVIONIX_ADSB_OUT_EMERGENCY_NO_COMM"/>
+        <entry value="5" name="UAVIONIX_ADSB_OUT_EMERGENCY_UNLAWFUL_INTERFERENCE"/>
+        <entry value="6" name="UAVIONIX_ADSB_OUT_EMERGENCY_DOWNED_AIRCRAFT"/>
+        <entry value="7" name="UAVIONIX_ADSB_OUT_EMERGENCY_RESERVED"/>
+      </enum>
 
-  <enum name="PING2020I_STATUS_FLAGS" bitmask="true">
-    <description>Status flags indicating transceiver self-test results</description>
-    <entry value="0x00" name="PING2020I_STATUS_INITIALIZING" />
-    <entry value="0x01" name="PING2020I_STATUS_OK" />
-    <entry value="0x02" name="PING2020I_STATUS_TX_FAIL_1090ES" />
-    <entry value="0x04" name="PING2020I_STATUS_RX_FAIL_1090ES" />
-    <entry value="0x08" name="PING2020I_STATUS_TX_FAIL_UAT" />
-    <entry value="0x10" name="PING2020I_STATUS_RX_FAIL_UAT" />
-  </enum>
+    <enum name="UAVIONIX_ADSB_OUT_STATUS" bitmask="true">
+      <description>Status flags indicating transceiver self-test results</description>
+      <entry value="0x00" name="UAVIONIX_ADSB_OUT_STATUS_INITIALIZING" />
+      <entry value="0x01" name="UAVIONIX_ADSB_OUT_STATUS_OK" />
+      <entry value="0x02" name="UAVIONIX_ADSB_OUT_STATUS_TX_FAIL_1090ES" />
+      <entry value="0x04" name="UAVIONIX_ADSB_OUT_STATUS_RX_FAIL_1090ES" />
+      <entry value="0x08" name="UAVIONIX_ADSB_OUT_STATUS_TX_FAIL_UAT" />
+      <entry value="0x10" name="UAVIONIX_ADSB_OUT_STATUS_RX_FAIL_UAT" />
+    </enum>
 
   </enums>
 
   <messages>
 
   <!-- Messages -->
-    <message id="202" name="PING2020I_OWNERSHIP_REPORT">
-      <description>Dynamic / Ownship message from Ping transceiver</description>
+  
+     <!-- The message  are reserved for UAVIONIX PING2020I. -->
+
+     <!-- <message id="202" name="UAVIONIX_ADSB_OUT_DYNAMIC">
+      <description>Dynamic / Ownship message from UAVIONIX ADS-B Out transceiver</description>
       <field type="uint32_t" name="utcTime" units="s">UTC time in seconds since GPS epoch (Jan 6, 1980)</field>
       <field type="int32_t" name="latitude" units="degE7">Latitude WGS84</field>
       <field type="int32_t" name="longitude" units="degE7">Longitude WGS84</field>
@@ -74,35 +77,36 @@
       <field type="int16_t" name="velVert" units="m/s * 1E2">Vertical speed</field>
       <field type="int16_t" name="nsVog" units="m/s * 1E2">North-South velocity</field>
       <field type="int16_t" name="ewVog" units="m/s * 1E2">East-West velocity</field>
-      <field type="uint16_t" name="state" enum="PING2020I_DYNAMIC_STATE">Dynamic state flags</field>
+      <field type="uint16_t" name="state" enum="UAVIONIX_ADSB_OUT_DYNAMIC_STATE">Dynamic state flags</field>
       <field type="uint16_t" name="squawk">Squawk code (Mode A)</field>
-      <field type="uint8_t" name="fixType" enum="PING2020I_FIX_TYPE">GPS Fix Type</field>
+      <field type="uint8_t" name="fixType" enum="UAVIONIX_ADSB_OUT_FIX_TYPE">GPS Fix Type</field>
       <field type="uint8_t" name="numSats">Number of satellites</field>
-      <field type="uint8_t" name="emStatus" enum="PING2020I_OWNERSHIP_EMERGENCY_STATUS">Emergency status</field>
-      <field type="uint8_t" name="control" enum="PING2020I_OWNERSHIP_CONTROL">ADS-B transponder dynamic input control flags</field>
-    </message>
+      <field type="uint8_t" name="emStatus" enum="UAVIONIX_ADSB_OUT_OWNERSHIP_EMERGENCY_STATUS">Emergency status</field>
+      <field type="uint8_t" name="control" enum="UAVIONIX_ADSB_OUT_OWNERSHIP_CONTROL">ADS-B transponder dynamic input control flags</field>
+    </message> -->
 
-    <message id="201" name="PING2020I_STATIC">
-      <description>Static configuration message for Ping transceiver</description>
+    <message id="201" name="UAVIONIX_ADSB_OUT_STATIC">
+      <description>Static configuration message for UAVIONIX ADS-B Out transceiver</description>
       <field type="uint8_t[3]" name="icao_address">Vehicle address (24 bits). Byte[2] = msByte</field>
       <field type="uint8_t" name="integrity">System Integrity and Design Assurance</field>
       <field type="uint16_t" name="stall_speed" units="cm/s">Aircraft stall speed in cm/s</field>
       <field type="char[8]" name="callsign">Vehicle identifier (8 characters, valid characters are A-Z, 0-9, " " only)</field>
       <field type="uint8_t" name="capability">Max Aircraft Speed and ADS-B in capability</field>
-      <field type="uint8_t" name="emitter_type">Transmitting vehicle type</field>
-      <field type="uint8_t" name="aircraft_size">Aircraft length and width encoding (table 2-35 of DO-282B)</field>
-      <field type="uint8_t" name="gps_offset_lat">GPS antenna lateral offset (table 2-36 of DO-282B)</field>
-      <field type="uint8_t" name="gps_offset_lon">GPS antenna longitudinal offset from nose [if non-zero, take position (in meters) divide by 2 and add one with max 60m] (table 2-37 DO-282B)</field>
-    </message>
-
-    <message id="203" name="PING2020I_STATUS">
-      <description>Self-test status message</description>
-      <field type="uint8_t" name="status" enum="PING2020I_STATUS_FLAGS">Self test status</field>
+      <field type="uint8_t" name="emitter">Transmitting vehicle type</field>
+      <field type="uint8_t" name="alwEncode">Aircraft length and width encoding (table 2-35 of DO-282B)</field>
+      <field type="uint8_t" name="gpsLatOffs">GPS antenna lateral offset (table 2-36 of DO-282B)</field>
+      <field type="uint8_t" name="gpsLonOffs">GPS antenna longitudinal offset from nose [if non-zero, take position (in meters) divide by 2 and add one with max 60m] (table 2-37 DO-282B)</field>
     </message>
 
 
-    <message id="248" name="PING2020I_IDENTIFICATION">
-      <description>Identification Message from Ping device</description>
+    <message id="203" name="UAVIONIX_ADSB_OUT_STATUS">
+      <description>Self test status.</description>
+      <field type="uint8_t" name="status" enum="UAVIONIX_ADSB_OUT_STATUS">Self test status</field>
+    </message>
+
+
+    <message id="248" name="UAVIONIX_ADSB_OUT_IDENTIFICATION">
+      <description>Identification Message from UAVIONIX ADS-B Out device</description>
 
       <field type="uint16_t" name="message_type">Message Type</field>
       <field type="uint8_t" name="target_network">Network ID</field>
@@ -128,5 +132,29 @@
       <field type="uint8_t[15]" name="secondaryFwPartNumber">Secondary FW Part Number</field>
     </message>
 
+    <message id="202" name="UAVIONIX_ADSB_OUT_NAVIGATION">
+      <description>Dynamic / Ownship message from UAVIONIX ADS-B Out transceiver</description>
+      <field type="uint32_t" name="utcTime_s" units="s" invalid="UINT32_MAX">UTC time since GPS epoch (in s since Jan 6, 1980). If unknown set to UINT32_MAX.</field>
+      <field type="int32_t" name="latitude" units="degE7" invalid="INT32_MAX">Latitude WGS84 (deg * 1E7). If unknown set to INT32_MAX</field>
+      <field type="int32_t" name="longitude" units="degE7" invalid="INT32_MAX">Longitude WGS84 (deg * 1E7). If unknown set to INT32_MAX.</field>
+      <field type="int32_t" name="altHAE_mm" units="mm" invalid="INT32_MAX">Altitude (meters * 1E3) UP +ve. Height above WGS-84 ellipsoid. If unknown set to INT32_MAX. Saturates at INT32_MAX-1.</field>
+      <field type="int32_t" name="altPres_mm" units="mm" invalid="INT32_MAX">Barometric pressure altitude (meters 1E3) UP +ve. If unknown set to INT32_MAX. Saturates at INT32_MAX-1.</field>
+      <field type="uint32_t" name="horizontalPL_mm" units="mm" invalid="UINT32_MAX">Horizontal Protection Level (mm). If unknown set to UINT32_MAX. Saturates at UINT32_MAX-1. May report HPLsbas or HPLfd (see state bit 0x01).</field>
+      <field type="uint32_t" name="verticalPL_mm" units="cm" invalid="UINT32_MAX">Vertical Protection Level (cm). If unknown set to UINT32_MAX. Saturates at UINT32_MAX-1. May report VPLsbas or VPLfd.</field>
+      <field type="uint32_t" name="horizontalFOM_mm" units="mm" invalid="UINT32_MAX">Horizontal Figure of Merit, 95% (HFOM) (mm). If unknown set to UINT32_MAX. Saturates at UINT32_MAX-1.</field>
+      <field type="uint16_t" name="verticalFOM_cm" units="cm" invalid="UINT16_MAX">Vertical Figure of Merit, 95% (VFOM) (cm). If unknown set to UINT16_MAX. Saturates at UINT16_MAX-1.</field>
+      <field type="uint16_t" name="horizontalVelocityFOM_mmps" units="mm/s" invalid="UINT16_MAX">Horizontal Velocity Figure of Merit, 95% (HVFOM) (m/s * 1E3). If unknown set to UINT16_MAX. Saturates at UINT16_MAX-1.</field>
+      <field type="uint16_t" name="verticalVelocityFOM_mmps" units="mm/s" invalid="UINT16_MAX">Vertical Velocity Figure of Merit, 95% (HVFOM) (m/s * 1E3). If unknown set to UINT16_MAX. Saturates at UINT16_MAX-1.</field>
+      <field type="int16_t" name="verticalVelocity_cmps" units="cm/s" invalid="INT16_MAX">GNSS vertical speed (m/s * 1E2). If unknown set to INT16_MAX. Saturates at INT16_MAX-1. (positive ascending, negative descending)</field>
+      <field type="int16_t" name="northVelocity_dmps" units="dm/s" invalid="INT16_MAX">North-South velocity over ground (m/s * 1E1) North +ve. If unknown set to INT16_MAX. Saturates at INT16_MAX-1.</field>
+      <field type="int16_t" name="eastVelocity_dmps" units="dm/s" invalid="INT16_MAX">East-West velocity over ground (m/s * 1E1) East +ve. If unknown set to INT16_MAX. Saturates at INT16_MAX-1.</field>
+      <field type="uint8_t" name="utcTimeFractional_cs" units="cs" invalid="UINT8_MAX">Time (ms * 1E1) since UTC time mark. If unknown set to UINT8_MAX.</field>
+      <field type="uint8_t" name="fixType" invalid="UINT8_MAX">GNSS fix type, see table below. If unknown set to UINT8_MAX.</field>
+      <field type="uint8_t" name="navState" invalid="UINT8_MAX">Navigation state, see table below. If unknown set to UINT8_MAX.</field>
+      <field type="uint8_t" name="satsUsed" invalid="UINT8_MAX">Number of satellites in solution. Includes GNSS and GEO satellites. If unknown set to UINT8_MAX. Saturates at UINT8_MAX-1.</field>
+      <field type="uint8_t" name="fwVersionMajor">Major FW version</field>
+      <field type="uint8_t" name="fwVersionMinor">Minor FW version</field>
+      <field type="uint8_t" name="fwVersionBuild">Build FW version</field>
+    </message>
   </messages>
 </mavlink>
